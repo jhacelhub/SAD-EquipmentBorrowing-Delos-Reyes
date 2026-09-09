@@ -1,25 +1,3 @@
-// ============================================================================
-// js/auth.js
-//
-// Responsible for:
-//   - Login (supabaseClient.auth.signInWithPassword)
-//   - Session checking
-//   - Logout (supabaseClient.auth.signOut)
-//   - Redirecting unauthenticated users
-//
-// Also defines showToast(), a small helper used by equipment.js and
-// transactions.js to show success/error messages, since all these files
-// share one global scope (they are loaded as plain <script> tags).
-//
-// WHERE TO SAVE THIS FILE:
-//   SAD-EquipmentBorrowing-Lastname/js/auth.js
-// ============================================================================
-
-// ----------------------------------------------------------------------
-// TOAST / MESSAGE HELPER (shared across the whole app)
-// ----------------------------------------------------------------------
-// Shows a small message banner at the top of the main content area.
-// type: "success" | "error"
 function showToast(message, type = "success") {
     const toast = document.getElementById("toast");
     if (!toast) return; // toast container only exists on index.html
