@@ -1,29 +1,3 @@
-// ============================================================================
-// js/equipment.js
-//
-// Responsible for:
-//   - Loading equipment from Supabase
-//   - Adding equipment      (BR-01, BR-02)
-//   - Editing equipment
-//   - Deleting equipment    (BR-10: requires confirmation)
-//   - Equipment search / filtering
-//   - Feeding the "Equipment" dropdown on the Borrow form
-//     (BR-03: only Available equipment can be selected)
-//
-// WHERE TO SAVE THIS FILE:
-//   SAD-EquipmentBorrowing-Lastname/js/equipment.js
-//
-// This file expects `supabaseClient` (from supabase.js) and `showToast()`
-// (from auth.js) to already be loaded on the page.
-//
-// NOTE: Only visual changes were made in this update (small edit/delete
-// icons in the table). All Supabase CRUD logic, validation, and business
-// rules are unchanged.
-// ============================================================================
-
-// In-memory copy of everything currently in the `equipment` table.
-// Kept up to date after every load/add/edit/delete so search & filter can
-// run instantly without hitting the database again.
 let equipmentCache = [];
 
 // Tracks which equipment row is being edited. Empty string = "Add" mode.
