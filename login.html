@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In - Equipment Borrowing System</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-page">
+
+  <main class="auth-card">
+    <div class="auth-mark">EB</div>
+    <h1 class="auth-title">Online Equipment Borrowing and Return Monitoring System</h1>
+    <p class="auth-subtitle">Equipment Borrowing and Return Monitoring</p>
+
+    <form id="loginForm" class="auth-form" novalidate>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@school.edu" required autocomplete="username" />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required autocomplete="current-password" />
+
+      <div id="loginError" class="form-error" role="alert" style="display:none;"></div>
+
+      <button type="submit" id="loginSubmitBtn" class="btn btn-primary btn-block">Login</button>
+    </form>
+
+    <p class="auth-footnote">
+      Use the test account created in Supabase Authentication for this lab exercise.
+    </p>
+  </main>
+
+  <!-- 1. Supabase library from CDN (must load first) -->
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <!-- 2. Our own scripts, in dependency order -->
+  <script src="js/supabase.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
